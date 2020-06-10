@@ -19,12 +19,18 @@ import {
   blocks as defaultBlocks,
 } from '@plone/volto/config';
 
+import CalendarView from './components/Views/Calendar';
+
 export const settings = {
   ...defaultSettings,
 };
 
 export const views = {
   ...defaultViews,
+  layoutViews: {
+    ...defaultViews.layoutViews,
+    calendar_view: CalendarView,
+  },
 };
 
 export const widgets = {
